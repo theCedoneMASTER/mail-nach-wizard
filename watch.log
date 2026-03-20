@@ -1,3 +1,41 @@
 👀 Watching for changes in /Users/cedricblanke/eigeneProjekte/Mail_Nach_wizard ...
    Drücke Ctrl+C zum Beenden.
 
+[master 53af7d1] Auto-update: 2026-03-20 16:44:43
+ Committer: Cedric Blanke <cedricblanke@cedric-macbookdienst.fritz.box>
+Ihr Name und E-Mail Adresse wurden automatisch auf Basis
+Ihres Benutzer- und Rechnernamens konfiguriert. Bitte prüfen Sie, dass
+diese zutreffend sind. Sie können diese Meldung unterdrücken, indem Sie
+diese explizit setzen. Führen Sie dazu den folgenden Befehl aus und folgen
+Sie den Anweisungen in Ihrem Editor, um die Konfigurationsdatei zu bearbeiten:
+
+    git config --global --edit
+
+Nachdem Sie das getan haben, können Sie Ihre Identität für diesen Commit
+ändern mit:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 263 insertions(+), 497 deletions(-)
+To https://github.com/theCedoneMASTER/mail-nach-wizard.git
+   f8f96f3..53af7d1  master -> master
+✅ [2026-03-20 16:44:43] Änderungen gepusht.
+[master d19f27f] Auto-update: 2026-03-20 16:57:41
+ Committer: Cedric Blanke <cedricblanke@cedric-macbookdienst.fritz.box>
+Ihr Name und E-Mail Adresse wurden automatisch auf Basis
+Ihres Benutzer- und Rechnernamens konfiguriert. Bitte prüfen Sie, dass
+diese zutreffend sind. Sie können diese Meldung unterdrücken, indem Sie
+diese explizit setzen. Führen Sie dazu den folgenden Befehl aus und folgen
+Sie den Anweisungen in Ihrem Editor, um die Konfigurationsdatei zu bearbeiten:
+
+    git config --global --edit
+
+Nachdem Sie das getan haben, können Sie Ihre Identität für diesen Commit
+ändern mit:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 497 insertions(+), 263 deletions(-)
+To https://github.com/theCedoneMASTER/mail-nach-wizard.git
+   53af7d1..d19f27f  master -> master
+✅ [2026-03-20 16:57:41] Änderungen gepusht.
