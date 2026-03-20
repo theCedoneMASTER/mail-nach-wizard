@@ -1,5 +1,14 @@
+// DARK/LIGHT SWITCH
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  themeToggle.textContent = document.body.classList.contains('light') ? "🌞 Light" : "🌙 Dark";
+});
+
 // UPDATE FINAL TEXT
 function updateText() {
+
+
   let output = "<p>Hallo Zusammen,</p><p>Ich danke für das Gespräch. Wie besprochen erstelle ich noch eine Mail mit dem weiteren Vorgehen.</p>";
 
   const bausteine = document.querySelectorAll('.baustein');
@@ -21,7 +30,7 @@ function updateText() {
   output += "Damit wir einen weiteren Termin planen können, müssen die Informationen bereitgestellt werden. Sie können diese entweder selbst bereitstellen oder direkt die Einrichtung vornehmen. Bei Fragen stehe ich Ihnen selbstverständlich jederzeit zur Verfügung.";
 
   const finalDiv = document.getElementById('finalText');
-  finalDiv.innerHTML = output + "<button id='copyBtn' class='button is-primary is-small'>Kopieren</button>";
+  finalDiv.innerHTML = output + "<button id='copyBtn'>Kopieren</button>";
 
   // COPY BUTTON
   document.getElementById('copyBtn').addEventListener('click', async function() {
