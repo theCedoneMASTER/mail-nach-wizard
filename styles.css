@@ -3,10 +3,10 @@
 
 /* BASE COLORS */
 :root {
-  --bg-color: #1a2030;
+  --bg-color: #2c3a50;
   --text-color: #e2e8f0;
-  --card-bg: #242c3d;
-  --card-border: #2e3a4e;
+  --card-bg: #374a63;
+  --card-border: #435a77;
   --accent: #6c8ebf;
   --accent-glow: rgba(108, 142, 191, 0.25);
 }
