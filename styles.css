@@ -95,6 +95,7 @@ input[type="checkbox"] {
 label:has(input:checked) {
   border: 1px solid var(--accent);
   background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
+  box-shadow: 0 0 0 3px var(--accent-glow), 0 4px 20px rgba(0,0,0,0.15);
 }
 
 /* FINAL TEXT */
