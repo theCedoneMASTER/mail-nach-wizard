@@ -34,6 +34,7 @@ function updateText() {
 
   // COPY BUTTON
   document.getElementById('copyBtn').addEventListener('click', async function() {
+    const btn = this;
     const html = finalDiv.innerHTML.replace(/<button[^>]*>.*?<\/button>/s, '');
     try {
       await navigator.clipboard.write([
@@ -42,9 +43,15 @@ function updateText() {
           'text/plain': new Blob([finalDiv.innerText], { type: 'text/plain' })
         })
       ]);
-      alert("Text wurde kopiert!");
+      btn.textContent = "✓ Kopiert!";
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = "Kopieren";
+        btn.classList.remove('copied');
+      }, 2000);
     } catch (err) {
-      alert("Kopieren fehlgeschlagen – bitte Rechtsklick → Kopieren benutzen.");
+      btn.textContent = "Fehler!";
+      setTimeout(() => { btn.textContent = "Kopieren"; }, 2000);
     }
   });
 }
