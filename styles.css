@@ -169,7 +169,6 @@ body {
   margin-bottom: 10px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  overflow: hidden;
   background: rgba(22,40,64,.5);
   backdrop-filter: blur(8px);
   animation: slideIn .4s cubic-bezier(.22,1,.36,1) both;
