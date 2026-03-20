@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Dynamische Support-Mail Vorlage</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support-Mail Vorlage - HotelFriend</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <h2>Support-Mail Vorlage</h2>
-  <button id="themeToggle">🌙 Dark</button>
-</div>
+<nav class="hf-navbar">
+  <a class="hf-navbar-brand" href="/">
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjE5NXB4IiBoZWlnaHQ9IjQzcHgiIHZpZXdCb3g9IjAgMCAxOTUgNDMiIHZlcnNpb249IjEuMSIKICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0NyAoNDUzOTYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPkdyb3VwIDU2PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik0zMC4zODE0MDU4LDkuNjQ2ODE5OSBMMzMuMTM1NTI2Miw5LjY0NjgxOTkgQzMzLjY4MTk2NDksOS42NDY4MTk5IDMzLjc0OTI1NCw5LjQyNjcwMDgzIDMzLjI2ODc5MTgsOS4xNTUxNzAxOSBMMTkuNjgwMTg5NywxLjQ3NTY0NTM2IEMxOC4yNDIzNjIzLDAuNjYzMDY0OTk5IDE1LjkwMDEwNzYsMC42NjA2Njg5MjkgMTQuNDU4MDg3MywxLjQ3NTY0NTM2IEwwLjg2OTkyNTY1Nyw5LjE1NTE3MDE5IEMwLjM4ODU4MjczMyw5LjQyNzIwNzM2IDAuNDQ5MTU2NjIsOS42NDY4MTk5IDEuMDAzMjE5MzksOS42NDY4MTk5IEwzLjkwMDI3Myw5LjY0NjgxOTkgQzQuMDYyMTI3MTgsOS4zMTc3NzQzIDQuMzc3OTkyOTUsOS4wMDUxMTQ0NiA0Ljg0ODI3ODU4LDguNzQyNTg5ODUgTDE0LjU0Mzg1NjksMy4zMzAyODc3IEMxNS45ODk3MTE5LDIuNTIzMTc3MDcgMTguMzMwMTMwNiwyLjUyMzA1ODM1IDE5Ljc3MjMyNzYsMy4zMzA1ODIxMSBMMjkuNDQwMzc1OSw4Ljc0Mzk3NDYgQzI5LjkwODAzMjEsOS4wMDU4Mjc1MyAzMC4yMjEyNDcyLDkuMzE4MTE3OTkgMzAuMzgxNDA1OCw5LjY0NjgxOTkgWiIKICAgICAgICAgICAgICAgIGlkPSJwYXRoLTEiPjwvcGF0aD4KICAgICAgICA8cGF0aAogICAgICAgICAgICAgICAgZD0iTTAsNi43MzUzNTM2OCBDMCw2LjE4ODUzMzk1IDAuMzg4NTgyNzMzLDUuNTI1NjM2NDMgMC44Njk5MjU2NTcsNS4yNTM1OTkyNyBMMTQuNDU4MDg3MywtMi40MjU5MjU1NyBDMTUuOTAwMTA3NiwtMy4yNDA5MDIgMTguMjQyMzYyMywtMy4yMzg1MDU5MyAxOS42ODAxODk3LC0yLjQyNTkyNTU3IEwzMy4yNjg3OTE4LDUuMjUzNTk5MjcgQzMzLjc0OTI1NCw1LjUyNTEyOTkgMzQuMTM4NzQ1Niw2LjE5ODQwMzI4IDM0LjEzODc0NTYsNi43MzUzNTM2OCBMMzQuMTM4NzQ1NiwyOC41MDExNjI1IEMzNC4xMzg3NDU2LDI5LjA0Nzk4MjIgMzMuNzUxMTU5OSwyOS43MTA0Nzk3IDMzLjI3MTA1MiwyOS45ODI5MTY5IEwxOS43MTc3NTU0LDM3LjY2MjQ0MTcgQzE4LjI3OTQzNSwzOC40Nzc0MTgyIDE1LjkzNzE2OTUsMzguNDc1MDIyMSAxNC40OTU2NTMsMzcuNjYyNDQxNyBMMC44NzIxODU5NDIsMjkuOTgyOTE2OSBDMC4zOTA0OTA5NDcsMjkuNzExMzg2MyAwLDI5LjAzODExMjkgMCwyOC41MDExNjI1IEwwLDYuNzM1MzUzNjggWiBNMTQuNTQzODU2OSwtMC41NzEyODMyMjggTDQuODQ4Mjc4NTgsNC44NDEwMTg5MiBDMy40MDE5NzQ4NCw1LjY0ODM4MDAzIDMuNDE2MTYxNzIsNi45Mjk5MTU5NyA0Ljg3ODk2MzY3LDcuNzAzOTY5MDIgTDE0LjQ5Mjg2NDYsMTIuNzkxMjM5NiBDMTUuOTQ2NDYzNiwxMy41NjA0MjI5IDE4LjMyNzE5NTMsMTMuNTY1NDI2MiAxOS43ODk4MjIzLDEyLjc5MTUzNzkgTDI5LjQwMjU3MzksNy43MDUzNDk5MiBDMzAuODU1OTk5Miw2LjkzNjMzMDM1IDMwLjg4MjEyNTUsNS42NDk2NzY5MSAyOS40NDAzNzU5LDQuODQyNDAzNjggTDE5Ljc3MjMyNzYsLTAuNTcwOTg4ODE0IEMxOC4zMzAxMzA2LC0xLjM3ODUxMjU4IDE1Ljk4OTcxMTksLTEuMzc4MzkzODYgMTQuNTQzODU2OSwtMC41NzEyODMyMjggWiIKICAgICAgICAgICAgICAgIGlkPSJwYXRoLTMiPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJIb21lIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iUG9ydGFsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuMDAwMDAwLCAtMjMuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC01NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAuMDAwMDAwLCAyNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDx0ZXh0IGlkPSLCriIgZm9udC1mYW1pbHk9IlJvYm90byIgZm9udC1zaXplPSI2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgICAgICAgICAgPHRzcGFuIHg9IjE5MCIgeT0iMTQuOTAwMDAxNSI+wq48L3RzcGFuPgogICAgICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgICAgICAgPGcgaWQ9IkxvZ28tR3JvdXAiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC00LUNvcHkiPgogICAgICAgICAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay0yIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPgogICAgICAgICAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICAgICAgICAgIDx1c2UgaWQ9IkNvbWJpbmVkLVNoYXBlLUNvcHkiIGZpbGw9IiM3QkM4RjUiIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPgogICAgICAgICAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay00IiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTMiPjwvdXNlPgogICAgICAgICAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICAgICAgICAgIDx1c2UgaWQ9IkNvbWJpbmVkLVNoYXBlIiBmaWxsPSIjN0JDOEY1IiB4bGluazpocmVmPSIjcGF0aC0zIj48L3VzZT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS0yIiBmaWxsPSIjNjZCQUUxIiBtYXNrPSJ1cmwoI21hc2stNCkiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBvaW50cz0iMTcuMDY5MzcyOCAxMi45NjcyOTI0IDE5LjA3MTc1NjYgMTMuMDUzNTI0NiA0MS41NjAyMTIgMS40Njk4NjczMiA0MS41NjAyMTIgNDAuNjIyMjEzMiAxNy4wNjkzNzI4IDQwLjYyMjIxMzIiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuOTM1OTMyLCAxMy4yNzkwMzEpIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGQ9Ik03Ljc4MzYzNCw5LjU0NjUzOTEyIEwzLjA3MjQ4NzExLDYuOTUxOTg1MzUgQzIuOTcwMDcwODcsNi44OTU1ODIgMi45MDE3OTMzOCw2Ljc4OTUzMTE2IDIuOTAxNzkzMzgsNi42ODY4NTgyNCBMMi45MDE3OTMzOCwxLjg5NTQ1NTM1IEMyLjkwMTc5MzM4LDEuNzkyNzgyNDMgMi44MzM1MTU4OSwxLjY4NjczMTU5IDIuNzMxMDk5NjUsMS42MzAzMjgyNSBMMC4xNzA2OTM3MjgsMC4yMjAyNDQ2NzEgQzAuMDY4Mjc3NDkxMiwwLjE2Mzg0MTMyOCAwLDAuMTk0Njg3NzEzIDAsMC4yOTczNjA2MzIgTDAsMTIuMTU2MDgyOCBDMCwxMi4yNTg3NTU3IDAuMDY4Mjc3NDkxMiwxMi4zNjQ4MDY2IDAuMTcwNjkzNzI4LDEyLjQyMTIwOTkgTDIuNzMxMDk5NjUsMTMuODMxMjkzNSBDMi44MzM1MTU4OSwxMy44ODc2OTY4IDIuOTAxNzkzMzgsMTMuODU2ODUwNCAyLjkwMTc5MzM4LDEzLjc1NDE3NzUgTDIuOTAxNzkzMzgsOS41OTU5MjQyOCBDMi45MDE3OTMzOCw5LjQ5MzI1MTM3IDIuOTcwMDcwODcsOS40NjI0MDQ5OCAzLjA3MjQ4NzExLDkuNTE4ODA0MzIgTDcuNzgzNjM0LDEyLjExMzM2MjEgQzcuODg2MDUwMjQsMTIuMTY5NzY1NCA3Ljk1NDMyNzczLDEyLjI3NTgxNjMgNy45NTQzMjc3MywxMi4zNzg0ODkyIEw3Ljk1NDMyNzczLDE2LjUzNjc0MjQgQzcuOTU0MzI3NzMsMTYuNjM5NDE1NCA4LjAyMjYwNTIyLDE2Ljc0NTQ2NjIgOC4xMjUwMjE0NiwxNi44MDE4Njk1IEwxMC42ODU0Mjc0LDE4LjIxMTk1MzEgQzEwLjc4Nzg0MzYsMTguMjY4MzU2NSAxMC44NTYxMjExLDE4LjIzNzUxMDEgMTAuODU2MTIxMSwxOC4xMzQ4MzcxIEwxMC44NTYxMjExLDYuMjc2MTE0OTkgQzEwLjg1NjEyMTEsNi4xNzM0NDIwNyAxMC43ODc4NDM2LDYuMDY3MzkxMjMgMTAuNjg1NDI3NCw2LjAxMDk4Nzg5IEw4LjEyNTAyMTQ2LDQuNjAwOTA0MzEgQzguMDIyNjA1MjIsNC41NDQ1MDA5NyA3Ljk1NDMyNzczLDQuNTc1MzQ3MzUgNy45NTQzMjc3Myw0LjY3ODAyMDI3IEw3Ljk1NDMyNzczLDkuNDY5NDIzMTYgQzcuOTU0MzI3NzMsOS41NzIwOTYwOCA3Ljg4NjA1MDI0LDkuNjAyOTQyNDcgNy43ODM2MzQsOS41NDY1MzkxMiBaIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZD0iSCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZD0iTTIyLjExNjA2NDksOS4yNTEzMDQ5OSBDMjIuMDA5MTA0OCw5LjMwODcxNTg2IDIxLjkzNzc5OCw5LjI3ODM5MjAzIDIxLjkzNzc5OCw5LjE3NTQ5NTQyIEwyMS45Mzc3OTgsNi43NzQ1NzQ1OCBDMjEuOTM3Nzk4LDYuNjcxNjc3OTcgMjIuMDA5MTA0OCw2LjU2NDgwNjMyIDIyLjExNjA2NDksNi41MDczOTU0NiBMMjYuOTExNDQ1MywzLjkzMzQ3NTA3IEMyNy4wMTg0MDU1LDMuODc2MDY0MiAyNy4wODk3MTIyLDMuNzY5MTkyNTUgMjcuMDg5NzEyMiwzLjY2NjI5NTk1IEwyNy4wODk3MTIyLDEuNDM2ODY5NDUgQzI3LjA4OTcxMjIsMS4zMzM5NzI4NSAyNy4wMTg0MDU1LDEuMzAzNjQ5MDIgMjYuOTExNDQ1MywxLjM2MTA1OTg4IEwxOS4wODU1MjcxLDUuNTYxNjIxNDIgQzE4Ljk3ODU2Nyw1LjYxOTAzMjI4IDE4LjkwNzI2MDIsNS43MjU5MDM5MyAxOC45MDcyNjAyLDUuODI4ODAwNTQgTDE4LjkwNzI2MDIsMTcuNzEzMzU4NyBDMTguOTA3MjYwMiwxNy44MTYyNTUzIDE4Ljk3ODU2NywxNy44NDY1NzkxIDE5LjA4NTUyNzEsMTcuNzg5MTY4MyBMMjEuNzU5NTMxMSwxNi4zNTM4OTY3IEMyMS44NjY0OTEyLDE2LjI5NjQ4NTggMjEuOTM3Nzk4LDE2LjE4OTYxNDIgMjEuOTM3Nzk4LDE2LjA0NjcxNzYgTDIxLjkzNzc5OCwxMi4wOTA0OTkzIEMyMS45Mzc3OTgsMTEuOTg4MDAyNyAyMi4wMDkxMDQ4LDExLjg4MTEzMSAyMi4xMTYwNjQ5LDExLjgyMzcyMDIgTDI1LjA5MzEyMjYsMTAuMjI1Nzg0NSBDMjUuMjAwMDgyOCwxMC4xNjgzNzM2IDI1LjI3MTM4OTYsMTAuMDYxNTAyIDI1LjI3MTM4OTYsOS45NTg2MDUzNSBMMjUuMjcxMzg5Niw3LjcyOTE3ODg1IEMyNS4yNzEzODk2LDcuNjI2MjgyMjUgMjUuMjAwMDgyOCw3LjU5NTk1ODQyIDI1LjA5MzEyMjYsNy42NTMzNjkyOCBMMjIuMTE2MDY0OSw5LjI1MTMwNDk5IFoiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlkPSJGIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" alt="HotelFriend">
+  </a>
+  <button class="hf-navbar-toggle" onclick="document.querySelector('.hf-navbar-menu').classList.toggle('is-open')">&#9776;</button>
+  <div class="hf-navbar-menu">
+    <a class="hf-navbar-item is-active" href="/">Support-Mail Vorlage</a>
+  </div>
+</nav>
 
-<!-- MITTE: BAUSTEINE -->
-<div class="main">
-  <p>Wähle die relevanten Bausteine aus:</p>
-  
-  <!-- 1️⃣ Kommunikation & E-Mail -->
-  <div class="category">
-    <h3>1️⃣ Kommunikation & E-Mail</h3>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="SMTP Einstellungen für den E-Mailversand" data-html="<p><strong>SMTP Einstellungen für den E-Mailversand:</strong></p><p>Um Ihre SMTP Einstellungen vorzunehmen, folgen Sie den Schritten auf dem Screenshot:</p><img src='https://www.dropbox.com/scl/fi/e1sqnvm2zvxvm0z0lga2h/SMTP.png?rlkey=su6hx42nn36qebgnketw8enqn&st=2h7pkikz&raw=1' width='800'>">
-      SMTP Einstellungen für den E-Mailversand
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Layout der E-Mail anpassen" data-html="<p><strong>Layout der E-Mail anpassen:</strong></p><p>Passen Sie das Layout der E-Mail nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/zql69x74im9kh5ia114cy/E-Mail_Layout.png?rlkey=m9sxgkgsho2dogrznndu248wk&st=m7d371ax&raw=1' width='800'>">
-      Layout der E-Mail anpassen
-    </label>
+<div class="hf-main">
+
+  <div class="hf-hero">
+    <h1>Support-Mail Vorlage</h1>
+    <p>Wähle die relevanten Bausteine aus und kopiere den fertigen Mailtext.</p>
   </div>
 
-  <!-- 2️⃣ Booking Engine / Buchungslogik -->
-  <div class="category">
-    <h3>2️⃣ Booking Engine / Buchungslogik</h3>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Allgemeine Einstellungen für die Booking Engine" data-html="<p><strong>Allgemeine Einstellungen für die Booking Engine:</strong></p><p>Passen Sie die Einstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/1iv0e4076ruub4up1ebb9/Booking-Engine_Allg.png?rlkey=di0bju0h79tca6ysfvawst5sh&st=sztw2dpv&raw=1' width='800'>">
-      Allgemeine Einstellungen für die Booking Engine
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Booking Engine Pro" data-html="<p><strong>Booking Engine Pro:</strong></p><p>Erweiterte Funktionen der Booking Engine nutzen.</p><img src='https://www.dropbox.com/scl/fi/63ppo89cn2xvicxmsvojs/BE_PRO.png?rlkey=w34lxc7yguzrc8f956sl2fo8i&st=ris2nl1k&raw=1' width='800'>">
-      Booking Engine Pro
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Bilder für die Booking Engine" data-html="<p><strong>Bilder für die Booking Engine:</strong></p><p>Konfigurieren Sie die Anzeige der Zimmer in der Booking Engine mit den passenden Bildern.</p><img src='https://www.dropbox.com/scl/fi/xjicbkjm0dcru4sbi9c6r/BE_Bilder2.png?rlkey=opziq7jucc3uhjukvwxg90i1z&st=387ywao8&raw=1' width='800'><br><img src='https://www.dropbox.com/scl/fi/u27el0rz19b370y0fc1bp/BE_Bilder1.png?rlkey=n1rj15u901sefh1q0oz8beslw&st=w3o9w32f&raw=1' width='800'>">
-      Bilder für die Booking Engine
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Buchungsbeschränkungen" data-html="<p><strong>Buchungsbeschränkungen:</strong></p><p>Definieren Sie Limits für Buchungen (z.B. Mindestaufenthalt).</p><img src='https://www.dropbox.com/scl/fi/frlc3rv5nv2xr9pfki85m/Restriktions.png?rlkey=4pfbebnvbzo4hvnyxsd5tfbak&st=qxiuual5&raw=1' width='800'>">
-      Buchungsbeschränkungen
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Saisons" data-html="<p><strong>Saisons:</strong></p><p>Legen Sie saisonale Preis- und Verfügbarkeitszeiträume fest.</p><img src='https://www.dropbox.com/scl/fi/rbqzou3luhcc6v1cnmhx7/Saisons.png?rlkey=vyjyx873kokrqgqkchjpv0wmo&st=sm446fpx&raw=1' width='800'>">
-      Saisons
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Dynamische Raten" data-html="<p><strong>Dynamische Raten:</strong></p><p>Aktivieren Sie variable Preise basierend auf Nachfrage.</p><img src='https://www.dropbox.com/scl/fi/axjoyfai7gfmige2mku6y/dynamische-rate.png?rlkey=q2p1242jpz98hzqixb8bni8cw&st=9haga7e3&raw=1' width='800'>">
-      Dynamische Raten
-    </label>
+  <div class="columns">
+    <div class="column is-half">
+
+      <!-- 1️⃣ Kommunikation & E-Mail -->
+      <div class="hf-section">
+        <h3 class="hf-section-title">Kommunikation &amp; E-Mail</h3>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="SMTP Einstellungen für den E-Mailversand" data-html="<p><strong>SMTP Einstellungen für den E-Mailversand:</strong></p><p>Um Ihre SMTP Einstellungen vorzunehmen, folgen Sie den Schritten auf dem Screenshot:</p><img src='https://www.dropbox.com/scl/fi/e1sqnvm2zvxvm0z0lga2h/SMTP.png?rlkey=su6hx42nn36qebgnketw8enqn&st=2h7pkikz&raw=1' width='800'>">
+          SMTP Einstellungen für den E-Mailversand
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Layout der E-Mail anpassen" data-html="<p><strong>Layout der E-Mail anpassen:</strong></p><p>Passen Sie das Layout der E-Mail nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/zql69x74im9kh5ia114cy/E-Mail_Layout.png?rlkey=m9sxgkgsho2dogrznndu248wk&st=m7d371ax&raw=1' width='800'>">
+          Layout der E-Mail anpassen
+        </label>
+      </div>
+
+      <!-- 2️⃣ Booking Engine / Buchungslogik -->
+      <div class="hf-section">
+        <h3 class="hf-section-title">Booking Engine / Buchungslogik</h3>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Allgemeine Einstellungen für die Booking Engine" data-html="<p><strong>Allgemeine Einstellungen für die Booking Engine:</strong></p><p>Passen Sie die Einstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/1iv0e4076ruub4up1ebb9/Booking-Engine_Allg.png?rlkey=di0bju0h79tca6ysfvawst5sh&st=sztw2dpv&raw=1' width='800'>">
+          Allgemeine Einstellungen für die Booking Engine
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Booking Engine Pro" data-html="<p><strong>Booking Engine Pro:</strong></p><p>Erweiterte Funktionen der Booking Engine nutzen.</p><img src='https://www.dropbox.com/scl/fi/63ppo89cn2xvicxmsvojs/BE_PRO.png?rlkey=w34lxc7yguzrc8f956sl2fo8i&st=ris2nl1k&raw=1' width='800'>">
+          Booking Engine Pro
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Bilder für die Booking Engine" data-html="<p><strong>Bilder für die Booking Engine:</strong></p><p>Konfigurieren Sie die Anzeige der Zimmer in der Booking Engine mit den passenden Bildern.</p><img src='https://www.dropbox.com/scl/fi/xjicbkjm0dcru4sbi9c6r/BE_Bilder2.png?rlkey=opziq7jucc3uhjukvwxg90i1z&st=387ywao8&raw=1' width='800'><br><img src='https://www.dropbox.com/scl/fi/u27el0rz19b370y0fc1bp/BE_Bilder1.png?rlkey=n1rj15u901sefh1q0oz8beslw&st=w3o9w32f&raw=1' width='800'>">
+          Bilder für die Booking Engine
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Buchungsbeschränkungen" data-html="<p><strong>Buchungsbeschränkungen:</strong></p><p>Definieren Sie Limits für Buchungen (z.B. Mindestaufenthalt).</p><img src='https://www.dropbox.com/scl/fi/frlc3rv5nv2xr9pfki85m/Restriktions.png?rlkey=4pfbebnvbzo4hvnyxsd5tfbak&st=qxiuual5&raw=1' width='800'>">
+          Buchungsbeschränkungen
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Saisons" data-html="<p><strong>Saisons:</strong></p><p>Legen Sie saisonale Preis- und Verfügbarkeitszeiträume fest.</p><img src='https://www.dropbox.com/scl/fi/rbqzou3luhcc6v1cnmhx7/Saisons.png?rlkey=vyjyx873kokrqgqkchjpv0wmo&st=sm446fpx&raw=1' width='800'>">
+          Saisons
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Dynamische Raten" data-html="<p><strong>Dynamische Raten:</strong></p><p>Aktivieren Sie variable Preise basierend auf Nachfrage.</p><img src='https://www.dropbox.com/scl/fi/axjoyfai7gfmige2mku6y/dynamische-rate.png?rlkey=q2p1242jpz98hzqixb8bni8cw&st=9haga7e3&raw=1' width='800'>">
+          Dynamische Raten
+        </label>
+      </div>
+
+      <!-- 3️⃣ Abrechnung & Rechtliches -->
+      <div class="hf-section">
+        <h3 class="hf-section-title">Abrechnung &amp; Rechtliches</h3>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Einstellungen für die Rechnung" data-html="<p><strong>Rechnungseinstellungen allgemein:</strong></p><p>Passen Sie die Rechnungseinstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/5in6t3wdlo1yex2eltach/Rechnungseinstellungen.png?rlkey=qom4oxw7aaiusy2nn0497ozgf&st=9g3o7t6k&raw=1' width='800'>">
+          Einstellungen für die Rechnung
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="Stornobedingungen" data-html="<p><strong>Stornobedingungen:</strong></p><p>Passen Sie die Stornierungsbedingungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/vhbjjwpgqfkfnsy269x0o/Stornobedingungen.png?rlkey=h7grv1xm17rijwpzzo0d8ifi8&st=ipa7fsc3&raw=1' width='800'>">
+          Stornobedingungen
+        </label>
+        <label class="hf-baustein">
+          <input type="checkbox" checked class="baustein" data-title="MwSt.-Sätze" data-html="<p><strong>MwSt.-Sätze:</strong></p><p>Konfigurieren Sie die Mehrwertsteuersätze für Rechnungen.</p><img src='https://www.dropbox.com/scl/fi/de8tosrzsc9oegrk481cm/MwSt..png?rlkey=e6s55gdh50r751klqwghyt8yt&st=o8eijzsh&raw=1' width='800'>">
+          MwSt.-Sätze
+        </label>
+      </div>
+
+    </div>
+
+    <div class="column is-half">
+      <div class="hf-output-sticky">
+        <h3 class="hf-section-title">Finaler Mailtext</h3>
+        <div id="finalText" class="hf-output">
+          <button id="copyBtn" class="button is-primary is-small">Kopieren</button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- 3️⃣ Abrechnung & Rechtliches -->
-  <div class="category">
-    <h3>3️⃣ Abrechnung & Rechtliches</h3>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Einstellungen für die Rechnung" data-html="<p><strong>Rechnungseinstellungen allgemein:</strong></p><p>Passen Sie die Rechnungseinstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/5in6t3wdlo1yex2eltach/Rechnungseinstellungen.png?rlkey=qom4oxw7aaiusy2nn0497ozgf&st=9g3o7t6k&raw=1' width='800'>">
-      Einstellungen für die Rechnung
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="Stornobedingungen" data-html="<p><strong>Stornobedingungen:</strong></p><p>Passen Sie die Stornierungsbedingungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/vhbjjwpgqfkfnsy269x0o/Stornobedingungen.png?rlkey=h7grv1xm17rijwpzzo0d8ifi8&st=ipa7fsc3&raw=1' width='800'>">
-      Stornobedingungen
-    </label>
-    <label>
-      <input type="checkbox" checked class="baustein" data-title="MwSt.-Sätze" data-html="<p><strong>MwSt.-Sätze:</strong></p><p>Konfigurieren Sie die Mehrwertsteuersätze für Rechnungen.</p><img src='https://www.dropbox.com/scl/fi/de8tosrzsc9oegrk481cm/MwSt..png?rlkey=e6s55gdh50r751klqwghyt8yt&st=o8eijzsh&raw=1' width='800'>">
-      MwSt.-Sätze
-    </label>
-  </div>
-
-  <h3>Finaler Mailtext:</h3>
-  <div id="finalText">
-    <button id="copyBtn">Kopieren</button>
-  </div>
 </div>
 
 <script src="script.js"></script>
