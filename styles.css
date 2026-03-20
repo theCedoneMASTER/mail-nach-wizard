@@ -127,7 +127,16 @@ label:has(input:checked) {
   transition: all 0.2s ease;
 }
 
-#copyBtn:hover { border-color: var(--accent); }
+#copyBtn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+#copyBtn.copied {
+  border-color: #4caf50;
+  color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.25);
+}
 
 /* IMAGES */
 img {
