@@ -8,159 +8,97 @@
 </head>
 <body>
 
-<!-- AMBIENT ORBS -->
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
-
 <!-- TOPBAR -->
 <header class="topbar">
   <div class="topbar-left">
-    <div class="topbar-logo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-    </div>
-    <div>
-      <span class="topbar-title">Support<span class="topbar-accent">Mail</span></span>
-      <span class="topbar-sub">Vorlage Generator</span>
-    </div>
+    <div class="topbar-logo">✉</div>
+    <span class="topbar-title">Support-Mail Vorlage</span>
   </div>
-  <div class="topbar-right">
-    <div class="status-pill">
-      <span class="status-dot"></span>
-      <span id="activeCount">0</span> aktiv
-    </div>
-    <button id="themeToggle" title="Theme wechseln">
-      <span class="theme-icon">🌙</span>
-    </button>
-  </div>
+  <button id="themeToggle" title="Theme wechseln">
+    <span class="theme-icon">🌙</span>
+  </button>
 </header>
 
 <!-- LAYOUT -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
+  <!-- LINKE SPALTE: BAUSTEINE -->
   <aside class="sidebar">
+    <p class="sidebar-hint">Bausteine auswählen</p>
 
-    <div class="category" style="--cat-color: 79,142,247">
+    <div class="category">
       <div class="category-header">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <div>
-          <h3>Kommunikation</h3>
-          <span class="cat-sub">E-Mail & SMTP</span>
-        </div>
-        <div class="cat-count" id="count-0">2</div>
+        <span class="category-badge blue">✉</span>
+        <h3>Kommunikation & E-Mail</h3>
       </div>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="0" data-title="SMTP Einstellungen für den E-Mailversand" data-html="<p><strong>SMTP Einstellungen für den E-Mailversand:</strong></p><p>Um Ihre SMTP Einstellungen vorzunehmen, folgen Sie den Schritten auf dem Screenshot:</p><img src='https://www.dropbox.com/scl/fi/e1sqnvm2zvxvm0z0lga2h/SMTP.png?rlkey=su6hx42nn36qebgnketw8enqn&st=2h7pkikz&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
-        <span>SMTP Einstellungen</span>
+        <input type="checkbox" checked class="baustein" data-title="SMTP Einstellungen für den E-Mailversand" data-html="<p><strong>SMTP Einstellungen für den E-Mailversand:</strong></p><p>Um Ihre SMTP Einstellungen vorzunehmen, folgen Sie den Schritten auf dem Screenshot:</p><img src='https://www.dropbox.com/scl/fi/e1sqnvm2zvxvm0z0lga2h/SMTP.png?rlkey=su6hx42nn36qebgnketw8enqn&st=2h7pkikz&raw=1' width='800'>">
+        <span>SMTP Einstellungen für den E-Mailversand</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="0" data-title="Layout der E-Mail anpassen" data-html="<p><strong>Layout der E-Mail anpassen:</strong></p><p>Passen Sie das Layout der E-Mail nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/zql69x74im9kh5ia114cy/E-Mail_Layout.png?rlkey=m9sxgkgsho2dogrznndu248wk&st=m7d371ax&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
-        <span>E-Mail Layout</span>
+        <input type="checkbox" checked class="baustein" data-title="Layout der E-Mail anpassen" data-html="<p><strong>Layout der E-Mail anpassen:</strong></p><p>Passen Sie das Layout der E-Mail nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/zql69x74im9kh5ia114cy/E-Mail_Layout.png?rlkey=m9sxgkgsho2dogrznndu248wk&st=m7d371ax&raw=1' width='800'>">
+        <span>Layout der E-Mail anpassen</span>
       </label>
     </div>
 
-    <div class="category" style="--cat-color: 168,85,247">
+    <div class="category">
       <div class="category-header">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v3"/><circle cx="18" cy="18" r="4"/><path d="M18 16v2l1 1"/></svg>
-        </div>
-        <div>
-          <h3>Booking Engine</h3>
-          <span class="cat-sub">Buchungslogik</span>
-        </div>
-        <div class="cat-count" id="count-1">6</div>
+        <span class="category-badge purple">⚙</span>
+        <h3>Booking Engine</h3>
       </div>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="1" data-title="Allgemeine Einstellungen für die Booking Engine" data-html="<p><strong>Allgemeine Einstellungen für die Booking Engine:</strong></p><p>Passen Sie die Einstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/1iv0e4076ruub4up1ebb9/Booking-Engine_Allg.png?rlkey=di0bju0h79tca6ysfvawst5sh&st=sztw2dpv&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="Allgemeine Einstellungen für die Booking Engine" data-html="<p><strong>Allgemeine Einstellungen für die Booking Engine:</strong></p><p>Passen Sie die Einstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/1iv0e4076ruub4up1ebb9/Booking-Engine_Allg.png?rlkey=di0bju0h79tca6ysfvawst5sh&st=sztw2dpv&raw=1' width='800'>">
         <span>Allgemeine Einstellungen</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="1" data-title="Booking Engine Pro" data-html="<p><strong>Booking Engine Pro:</strong></p><p>Erweiterte Funktionen der Booking Engine nutzen.</p><img src='https://www.dropbox.com/scl/fi/63ppo89cn2xvicxmsvojs/BE_PRO.png?rlkey=w34lxc7yguzrc8f956sl2fo8i&st=ris2nl1k&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="Booking Engine Pro" data-html="<p><strong>Booking Engine Pro:</strong></p><p>Erweiterte Funktionen der Booking Engine nutzen.</p><img src='https://www.dropbox.com/scl/fi/63ppo89cn2xvicxmsvojs/BE_PRO.png?rlkey=w34lxc7yguzrc8f956sl2fo8i&st=ris2nl1k&raw=1' width='800'>">
         <span>Booking Engine Pro</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="1" data-title="Bilder für die Booking Engine" data-html="<p><strong>Bilder für die Booking Engine:</strong></p><p>Konfigurieren Sie die Anzeige der Zimmer in der Booking Engine mit den passenden Bildern.</p><img src='https://www.dropbox.com/scl/fi/xjicbkjm0dcru4sbi9c6r/BE_Bilder2.png?rlkey=opziq7jucc3uhjukvwxg90i1z&st=387ywao8&raw=1' width='800'><br><img src='https://www.dropbox.com/scl/fi/u27el0rz19b370y0fc1bp/BE_Bilder1.png?rlkey=n1rj15u901sefh1q0oz8beslw&st=w3o9w32f&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
-        <span>Bilder</span>
+        <input type="checkbox" checked class="baustein" data-title="Bilder für die Booking Engine" data-html="<p><strong>Bilder für die Booking Engine:</strong></p><p>Konfigurieren Sie die Anzeige der Zimmer in der Booking Engine mit den passenden Bildern.</p><img src='https://www.dropbox.com/scl/fi/xjicbkjm0dcru4sbi9c6r/BE_Bilder2.png?rlkey=opziq7jucc3uhjukvwxg90i1z&st=387ywao8&raw=1' width='800'><br><img src='https://www.dropbox.com/scl/fi/u27el0rz19b370y0fc1bp/BE_Bilder1.png?rlkey=n1rj15u901sefh1q0oz8beslw&st=w3o9w32f&raw=1' width='800'>">
+        <span>Bilder für die Booking Engine</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="1" data-title="Buchungsbeschränkungen" data-html="<p><strong>Buchungsbeschränkungen:</strong></p><p>Definieren Sie Limits für Buchungen (z.B. Mindestaufenthalt).</p><img src='https://www.dropbox.com/scl/fi/frlc3rv5nv2xr9pfki85m/Restriktions.png?rlkey=4pfbebnvbzo4hvnyxsd5tfbak&st=qxiuual5&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="Buchungsbeschränkungen" data-html="<p><strong>Buchungsbeschränkungen:</strong></p><p>Definieren Sie Limits für Buchungen (z.B. Mindestaufenthalt).</p><img src='https://www.dropbox.com/scl/fi/frlc3rv5nv2xr9pfki85m/Restriktions.png?rlkey=4pfbebnvbzo4hvnyxsd5tfbak&st=qxiuual5&raw=1' width='800'>">
         <span>Buchungsbeschränkungen</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="1" data-title="Saisons" data-html="<p><strong>Saisons:</strong></p><p>Legen Sie saisonale Preis- und Verfügbarkeitszeiträume fest.</p><img src='https://www.dropbox.com/scl/fi/rbqzou3luhcc6v1cnmhx7/Saisons.png?rlkey=vyjyx873kokrqgqkchjpv0wmo&st=sm446fpx&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="Saisons" data-html="<p><strong>Saisons:</strong></p><p>Legen Sie saisonale Preis- und Verfügbarkeitszeiträume fest.</p><img src='https://www.dropbox.com/scl/fi/rbqzou3luhcc6v1cnmhx7/Saisons.png?rlkey=vyjyx873kokrqgqkchjpv0wmo&st=sm446fpx&raw=1' width='800'>">
         <span>Saisons</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="1" data-title="Dynamische Raten" data-html="<p><strong>Dynamische Raten:</strong></p><p>Aktivieren Sie variable Preise basierend auf Nachfrage.</p><img src='https://www.dropbox.com/scl/fi/axjoyfai7gfmige2mku6y/dynamische-rate.png?rlkey=q2p1242jpz98hzqixb8bni8cw&st=9haga7e3&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="Dynamische Raten" data-html="<p><strong>Dynamische Raten:</strong></p><p>Aktivieren Sie variable Preise basierend auf Nachfrage.</p><img src='https://www.dropbox.com/scl/fi/axjoyfai7gfmige2mku6y/dynamische-rate.png?rlkey=q2p1242jpz98hzqixb8bni8cw&st=9haga7e3&raw=1' width='800'>">
         <span>Dynamische Raten</span>
       </label>
     </div>
 
-    <div class="category" style="--cat-color: 34,197,94">
+    <div class="category">
       <div class="category-header">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-        </div>
-        <div>
-          <h3>Abrechnung</h3>
-          <span class="cat-sub">Rechtliches & MwSt.</span>
-        </div>
-        <div class="cat-count" id="count-2">3</div>
+        <span class="category-badge green">€</span>
+        <h3>Abrechnung & Rechtliches</h3>
       </div>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="2" data-title="Einstellungen für die Rechnung" data-html="<p><strong>Rechnungseinstellungen allgemein:</strong></p><p>Passen Sie die Rechnungseinstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/5in6t3wdlo1yex2eltach/Rechnungseinstellungen.png?rlkey=qom4oxw7aaiusy2nn0497ozgf&st=9g3o7t6k&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
-        <span>Rechnungseinstellungen</span>
+        <input type="checkbox" checked class="baustein" data-title="Einstellungen für die Rechnung" data-html="<p><strong>Rechnungseinstellungen allgemein:</strong></p><p>Passen Sie die Rechnungseinstellungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/5in6t3wdlo1yex2eltach/Rechnungseinstellungen.png?rlkey=qom4oxw7aaiusy2nn0497ozgf&st=9g3o7t6k&raw=1' width='800'>">
+        <span>Einstellungen für die Rechnung</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="2" data-title="Stornobedingungen" data-html="<p><strong>Stornobedingungen:</strong></p><p>Passen Sie die Stornierungsbedingungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/vhbjjwpgqfkfnsy269x0o/Stornobedingungen.png?rlkey=h7grv1xm17rijwpzzo0d8ifi8&st=ipa7fsc3&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="Stornobedingungen" data-html="<p><strong>Stornobedingungen:</strong></p><p>Passen Sie die Stornierungsbedingungen nach Ihren Vorgaben an.</p><img src='https://www.dropbox.com/scl/fi/vhbjjwpgqfkfnsy269x0o/Stornobedingungen.png?rlkey=h7grv1xm17rijwpzzo0d8ifi8&st=ipa7fsc3&raw=1' width='800'>">
         <span>Stornobedingungen</span>
       </label>
       <label>
-        <input type="checkbox" checked class="baustein" data-cat="2" data-title="MwSt.-Sätze" data-html="<p><strong>MwSt.-Sätze:</strong></p><p>Konfigurieren Sie die Mehrwertsteuersätze für Rechnungen.</p><img src='https://www.dropbox.com/scl/fi/de8tosrzsc9oegrk481cm/MwSt..png?rlkey=e6s55gdh50r751klqwghyt8yt&st=o8eijzsh&raw=1' width='800'>">
-        <div class="check-wrap"><div class="check-box"></div></div>
+        <input type="checkbox" checked class="baustein" data-title="MwSt.-Sätze" data-html="<p><strong>MwSt.-Sätze:</strong></p><p>Konfigurieren Sie die Mehrwertsteuersätze für Rechnungen.</p><img src='https://www.dropbox.com/scl/fi/de8tosrzsc9oegrk481cm/MwSt..png?rlkey=e6s55gdh50r751klqwghyt8yt&st=o8eijzsh&raw=1' width='800'>">
         <span>MwSt.-Sätze</span>
       </label>
     </div>
-
   </aside>
 
-  <!-- PREVIEW -->
+  <!-- RECHTE SPALTE: VORSCHAU -->
   <main class="preview">
-    <div class="preview-topbar">
-      <div class="preview-tabs">
-        <button class="tab active" data-tab="preview">Vorschau</button>
-        <button class="tab" data-tab="html">HTML</button>
-      </div>
-      <button id="copyBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-        Kopieren
-      </button>
+    <div class="preview-header">
+      <span class="preview-title">Finaler Mailtext</span>
+      <button id="copyBtn">📋 Kopieren</button>
     </div>
-
-    <div class="preview-body">
-      <div class="mail-chrome">
-        <div class="mail-chrome-bar">
-          <div class="chrome-dot red"></div>
-          <div class="chrome-dot yellow"></div>
-          <div class="chrome-dot green"></div>
-          <span class="chrome-label">Support Mail — Vorschau</span>
-        </div>
-        <div id="finalText" class="mail-content"></div>
-      </div>
-    </div>
+    <div id="finalText"></div>
   </main>
 
 </div>
