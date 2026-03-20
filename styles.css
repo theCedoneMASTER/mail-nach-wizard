@@ -78,7 +78,11 @@ label {
   border: 1px solid var(--card-border);
 }
 
-label:hover { transform: translateY(-2px); }
+label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border-color: var(--accent);
+}
 
 /* CHECKBOX */
 input[type="checkbox"] {
