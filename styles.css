@@ -12,11 +12,12 @@
 }
 
 body.light {
-  --bg-color: #f5f5f5;
+  --bg-color: #f0f4f8;
   --text-color: #111;
   --card-bg: #fff;
-  --card-border: #ccc;
-  --accent: #888;
+  --card-border: #d0d8e4;
+  --accent: #4a7ab5;
+  --accent-glow: rgba(74, 122, 181, 0.15);
 }
 
 /* BODY */
