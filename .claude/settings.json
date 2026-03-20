@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "input=$(cat); file=$(echo \"$input\" | jq -r '.tool_input.file_path // empty'); [ -n \"$file\" ] && cd /Users/cedricblanke/eigeneProjekte/Mail_Nach_wizard && git add -A && { git diff --cached --quiet || { fname=$(basename \"$file\") && git commit -m \"Update: $fname\" && git push; }; } || true",
+            "statusMessage": "Pushing to GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
